@@ -1,6 +1,14 @@
 /* THEME OPTIONS ************************** */
 
 /* GLOBAL ********************************* */
+/**
+Inclusion des polices en css3
+ */
+@font-face {
+    font-family : "Arista";
+    src: url(../typos/Arista2.0_light.eot); /* IE */
+    src: local("Arista"), url(../typos/Arista2.0_light.ttf) format('truetype');/* non-IE */
+}
 /* ----- Body ------------------------ */
 body{font-size: 12px;font-family: Trebuchet MS,Verdana,Helvetica,sans-serif;}/*definition de la taille de police de base*/
 /* ----- Custom Fonts ---------------- */
@@ -25,22 +33,21 @@ h6 {font-size: 0.8em}
 /* ----- Header Region --------------- */
 .header-deco{background:transparent url(../images/bg_menu_rp.gif) repeat-x left 70px;}
 /* ----- Search Box ------------------ */
-#headSearch{
-margin: 0.2em 0 0 0;
+#search-container{
 background: url(../images/bg_recherche.gif) no-repeat left 18px;
 }
 
 /*--- Formulaire rechercher ---*/
-#headSearch .form-item,#headSearch .form-actions{float: left;margin: 0;}
-#headSearch .form-item{margin: 0.5em 1em 0 7em;}
-#headSearch input.form-text{padding: 0;width: 8em;}
-#headSearch input.form-submit{height: auto;border: 0;margin: 0.4em 1em;}
+#search-container .form-item,#search-container .form-actions{float: left;margin: 0;}
+#search-container .form-item{margin: 0.5em 1em 0 7em;}
+#search-container input.form-text{padding: 0;width: 8em;}
+#search-container input.form-submit{height: auto;border: 0;margin: 0.4em 1em;}
 /* ----- Logo ------------------------ */
 /* ----- Site Title and Slogan ------- */
 #name-and-slogan{background: transparent;padding: 20px 0 0px 10px;}
 #site-name a{}
 #site-name{}
-#site-slogan{color:#EFEFEF;font-size: 12px;}
+#site-slogan{color:#EFEFEF;font-size: 1.1em;}
 
 #site-slogan a{
 text-decoration: none;

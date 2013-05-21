@@ -1,45 +1,54 @@
 <?php
-
-/*
- * Header en include pour les pages
+/* 
+ * Le header du site.Vient se placer après le <head>
+ * Codé en HTML5
+ * 
  */
+
 ?>
- <header id="header" role="banner">
+ <!-- ______________________ HEADER  CUSTOM_______________________ -->
+    <header id="header">
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-    <?php endif; ?>
+		
 
-    <?php if ($site_name || $site_slogan): ?>
-      <hgroup id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
+        <div id="headHaut">
+
+          <div id="logo-container">
+	           <?php if (!empty($logo)): ?>
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+                  <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/></a>
+	          <?php endif; ?>
+	       </div>
+
+         <div id="menuImg">
+              <?php if (!empty($page['navStatic'])): ?>
+		           <?php print render ($page['navStatic']); ?>
+	          <?php endif; ?>
+          </div>
+
+          </div><!-- /headHaut -->
+		 <div id="headBas">
+
+	 <?php if ($site_slogan): ?>
+          <div id="site-slogan"><?php print $site_slogan; ?></div>
         <?php endif; ?>
 
-        <?php if ($site_slogan): ?>
-          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-      </hgroup><!-- /#name-and-slogan -->
-    <?php endif; ?>
+          
+            <div id="search-container">
+		  <?php if (!empty($page['search_box'])): ?>
+		  <?php print render ($page['search_box']); ?>
+		  <?php endif; ?>
+		  </div><!-- /recherche -->
 
-    <?php if ($secondary_menu): ?>
-      <nav id="secondary-menu" role="navigation">
-        <?php print theme('links__system_secondary_menu', array(
-          'links' => $secondary_menu,
-          'attributes' => array(
-            'class' => array('links', 'inline', 'clearfix'),
-          ),
-          'heading' => array(
-            'text' => $secondary_menu_heading,
-            'level' => 'h2',
-            'class' => array('element-invisible'),
-          ),
-        )); ?>
-      </nav>
-    <?php endif; ?>
+                 
+          <nav id="menu-container">
+     <?php if (!empty($page['menu_dyn'])): ?>
+	   <?php print render ($page['menu_dyn']); ?>
+      <?php endif; ?>
+          </nav><!-- /menuHead -->
 
-    <?php print render($page['header']); ?>
 
-  </header>
+		</div><!-- /headBas -->
+
+	       
+    </header> <!-- /header -->

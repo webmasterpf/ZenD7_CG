@@ -1,55 +1,37 @@
 /**
-Template page d'accueil custom
-Diapo Panoramique
+Layout CSS pour page--front.tpl custom sous D7
+Utilisation de Html5 et Sass (ZenGrids) avec sous-thème Zen
  */
-#header-inner{
-	margin:auto;
-	height:auto;
-	width:990px;
-	background:none;
-	
+/*Create a new .scss file and import the grids file
+ Import de la grille de base*/
+@import "_grids.scss";
 
-}
+$zen-column-count: 12;//nombre de colonnes de la grille du header
+$zen-gutter-width: 10px;
+
+
+#header{@include zen-grid-container;}
 /*Partie gauche du header*/
-#headHaut{
-	width:990px;
-	height:55px;
-	float:none;
-	display:block;
-	margin:0;
-	
+#headHaut{@include zen-grid-container;
+	margin:0;	
 }
-#logoHead{
-	height:55px !important;
-	width:335px;
-	float:left;
-	display:block;
+#logo-container{
+	@include zen-grid-item(3,1);
 	margin:0;
 }
 #logoHead img{
-	height:55px !important;
-	width:335px;
+	height:auto !important;
+	width:auto;
 	padding:0;
 	margin:0;
 }
 /*Menu pictos header*/
 #menuImg{
-	height:30px;
-	width:auto;
-	float:right;
-	background:transparent;
-	padding:30px 0 0;
+	@include zen-grid-item(9,1,right);
 
 }
-#navPicto{
-border:0;
-height: 3em;
-padding: 1.6em 0 0;
-text-align: right;
-
-}
-#navPicto table,#navPicto tbody{border: 0;}
-#navPicto td{
+#menuImg table,#menuImg tbody{border: 0;}
+#menuImg td{
 border:0;
 height:25px;
 width:auto;
@@ -58,52 +40,26 @@ float:left;
 padding:4px;
 }
 
-#navPicto a {border:0;font-family: arista,Trebuchet MS, sans-serif;
-    text-align: center;color:#94127F;font-size: 23px;text-decoration: none;}
-#navPicto a:hover{color: #F29400;}
+#menuImg a {border:0;font-family: arista,Trebuchet MS, sans-serif;padding:0 0.75em;
+    text-align: center;color:#94127F;font-size: 1.5em;text-decoration: none;}
+#menuImg a:hover{color: #F29400;}
 /************PARTIE BASSE**************/
 #headBas{
-	width:990px;
-	height:130px;/*Nice menu:108px - Superfish:130px*/
-	float:none;
-	display:block;
-	margin:5px 0 0 0;
+	@include zen-grid-container;
 	background:transparent url(../images/bg_menu_rp.gif) repeat-x top left;
 	
 }
-/*Menu principal haut du header*/
-#menuHead{
-	float:none;
-	height:auto;
-	padding:0;
-	width:990px;
-	
-	
-	
-}
-#name-and-slogan{
-	height:20px;
-	width:990px;
-	vertical-align:bottom;
-	float:right;
-}
+
+#name-and-slogan{}
 #site-name a{
 text-decoration: none;
 color: white;
 text-transform: uppercase;
 }
 
-#site-name{
-padding:160px 0 0 10px;
-margin:0;
-}
+#site-name{}
 #site-slogan{
-color:white;
-display:block;
-float:left;
-height:20px;
-padding:3px 0 0 40px;
-width:400px;
+@include zen-clear(both);@include zen-grid-item(8,1);
 }
 
 #site-slogan a{
@@ -111,15 +67,16 @@ text-decoration: none;
 color: white;
 text-transform: uppercase;
 }
-
+#search-container{ @include zen-grid-item(3,2,right);margin:0;}
+/*Menu principal haut du header*/
+#menu-container{
+@include zen-clear(both);@include zen-grid-item(12,1);	
+}
 
 /*FIN CSS HEADER*/
 /*****************/
-#mainPage{
-	margin:auto;
-	width:990px;
-	clear:none;
-        background: url(../images/bg_content_etoile.gif) no-repeat left bottom;
+#main{
+	background: url(../images/bg_content_etoile.gif) no-repeat left bottom;
 	
 }
 /********************/
@@ -129,26 +86,15 @@ text-transform: uppercase;
     font-weight: bold;
 }
 #HPDiapo{
-width: auto;
-height: auto;
-padding:10px 0 0;
-
+@include zen-grid-container;
 }
 /****************/
 #BasGaucheHP{
-        width:54%;
-        float:left;
-	background:none;
-	color:black;
-
+        @include zen-clear(both);@include zen-grid-item(6,1);
 }
 
 #BasDroitHP{
-	width:46% !important;
-        width: 43%;
-	float:right;
-	background:none;
-        margin: 10px 0;
+	@include zen-grid-item(6,2,right);
 }
 #BasGaucheHP ul li{
     list-style: square;

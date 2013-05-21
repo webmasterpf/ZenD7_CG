@@ -29,69 +29,70 @@ $theme_path = drupal_get_path('theme', 'zend7_cg');
 include ($theme_path.'/templates/includes/header.inc');
 ?>
   <div id="main">
+<!-- ______________________ LAYOUT HOMEPAGE PANORAMIQUE C.GRAWITZ_______________________ -->
+ <!-- ______________________ CONTENU _______________________ -->
+	
+            <div class="container-hp">
+                
+ 
+          <?php if (!empty($page['content_top'])): ?>
+           <div id="content-top" class="row-fluid content-top"> <?php print render($page['content_top']); ?> </div><!-- /#content-top -->
+          <?php endif; ?>
 
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php print render($tabs); ?>
-      <?php print render($page['help']); ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-      <?php print $feed_icons; ?>
-    </div><!-- /#content -->
+<?php
+$theme_path = drupal_get_path('theme', 'cyranod7_cg');
+include ($theme_path.'/includes/inc_drupalMMHT.php');
+?>          
 
-    <div id="navigation">
+   <!-- ______________________ ZONE DIAPO PANORAMIQUE _______________________ -->
+ <div id="zone-dipao">
+           <?php if (!empty($page['DiapoHP'])): ?>
+                 <div id="HPDiapo"><?php print render ($page['DiapoHP']); ?></div>
+              <?php endif; ?>
+</div>
 
-      <?php if ($main_menu): ?>
-        <nav id="main-menu" role="navigation">
-          <?php
-          // This code snippet is hard to modify. We recommend turning off the
-          // "Main menu" on your sub-theme's settings form, deleting this PHP
-          // code block, and, instead, using the "Menu block" module.
-          // @see http://drupal.org/project/menu_block
-          print theme('links__system_main_menu', array(
-            'links' => $main_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => t('Main menu'),
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
-      <?php endif; ?>
+        
+            
+<!-- ______________________ PARTIE BAS GAUCHE _______________________ -->
+<div  id="BasGaucheHP">
+                 <?php if (!empty($page['HPBasGauche'])): ?>
+                 <?php print render ($page['HPBasGauche']); ?>
+              <?php endif; ?>
 
-      <?php print render($page['navigation']); ?>
 
-    </div><!-- /#navigation -->
+</div>
 
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
+<!-- ______________________ PARTIE BAS DROITE _______________________ -->
+<div id="BasDroitHP">
 
-    <?php if ($sidebar_first || $sidebar_second): ?>
-      <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
-      </aside><!-- /.sidebars -->
-    <?php endif; ?>
+<?php if (!empty($page['HPBasDroit'])): ?>
+  <?php print render ($page['HPBasDroit']); ?>
+        <?php endif; ?>
+</div>
+ 
+
+     
+	<!-- ______________________ CONTENU BAS _______________________ -->
+   <div id="zone-bas">
+    <?php if (!empty($page['content_bottom_home'])): ?>
+    <div id="content-bottom-home">
+      <?php print render ($page['content_bottom_home']); ?>
+        <?php //print $feed_icons; ?>
+         <?php endif; ?>
+
+
+    </div><!-- /#content-bottom -->
+</div>        
+
+</div><!-- /container -->
+	 
 
   </div><!-- /#main -->
 
-  <?php print render($page['footer']); ?>
+ <?php
+$theme_path = drupal_get_path('theme', 'zend7_cg');
+include ($theme_path.'/templates/includes/footer.inc');
+?>
 
 </div><!-- /#page -->
 
