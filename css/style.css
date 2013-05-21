@@ -1,0 +1,147 @@
+/* THEME OPTIONS ************************** */
+
+/* GLOBAL ********************************* */
+/* ----- Body ------------------------ */
+body{font-size: 12px;font-family: Trebuchet MS,Verdana,Helvetica,sans-serif;}/*definition de la taille de police de base*/
+/* ----- Custom Fonts ---------------- */
+/* ----- Text ------------------------ */
+ /*------------------------------------------------------*
+  *------------ CSS H  ----*
+  *------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6{padding: 1px;}
+h1,h2,h3{line-height: 1.1em;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.7em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.3em;}
+h5 {font-size: 1em;}
+h6 {font-size: 0.8em}
+/* ----- Links ----------------------- */
+/* ----- Lists ----------------------- */
+/* ----- Tables ---------------------- */
+/* ----- Forms ----------------------- */
+
+/* HEADER ********************************* */
+/* ----- Header Region --------------- */
+.header-deco{background:transparent url(../images/bg_menu_rp.gif) repeat-x left 70px;}
+/* ----- Search Box ------------------ */
+#headSearch{
+margin: 0.2em 0 0 0;
+background: url(../images/bg_recherche.gif) no-repeat left 18px;
+}
+
+/*--- Formulaire rechercher ---*/
+#headSearch .form-item,#headSearch .form-actions{float: left;margin: 0;}
+#headSearch .form-item{margin: 0.5em 1em 0 7em;}
+#headSearch input.form-text{padding: 0;width: 8em;}
+#headSearch input.form-submit{height: auto;border: 0;margin: 0.4em 1em;}
+/* ----- Logo ------------------------ */
+/* ----- Site Title and Slogan ------- */
+#name-and-slogan{background: transparent;padding: 20px 0 0px 10px;}
+#site-name a{}
+#site-name{}
+#site-slogan{color:#EFEFEF;font-size: 12px;}
+
+#site-slogan a{
+text-decoration: none;
+color: white;
+text-transform: uppercase;
+}
+/* ----- Navigation static ------- */
+#navPicto table,#navPicto tbody{border: 0;margin-top: 12px;float: right;}
+#navPicto td{
+border:0;
+display:block;
+float:left;
+padding:4px;
+}
+
+#navPicto a {border:0;font-family: arista,Trebuchet MS, sans-serif;
+    text-align: center;color:#94127F;font-size: 23px;text-decoration: none;}
+#navPicto a:hover{color: #F29400;}
+#navPicto{margin: 1em 0 0 15em;}
+/*HOMEPAGE **********************************/
+/* ------ Regions -------------------- */
+#BasGaucheHP a,#BasDroitHP a{
+text-decoration:none;
+}
+#BasGaucheHP a:hover,#BasDroitHP a:hover{
+text-decoration:underline;
+}
+#BasDroitHP h3,#BasGaucheHP h3,#BasDroitHP h2,#BasGaucheHP h2{
+    text-align: center;color: #E7512F;font-size: 1.5em;
+}
+/* NAVIGATION ***************************** */
+/* ----- Main Navigation ------------- */
+/* ----- Secondary Navigation -------- */
+/* ----- Breadcrumbs ----------------- */
+/* ----- First Sidebar Menu Blocks --- */
+/* ----- Second Sidebar Menu Blocks -- */
+/* ----- Admin Menu ------------------ */
+/* ----- Pager Nav ------------------- */
+
+/* SIDEBARS ******************************* */
+
+/* FOOTER ********************************* */
+/* ----- Fat Footer ------------------ */
+#footer-content{background: white url(../images/bg_footer.jpg) no-repeat bottom right;}
+#footer-content a{color: #9898a6;text-decoration:none;}
+#footer-content a:hover{color: #000000;}
+#bloc_stats{
+    color:red;
+    margin:0 auto;
+    width:600px;
+}
+/* CONTENT ******************************** */
+/*//////////////// BORDER RIGHT \\\\\\\\\\\\\\\\*/
+.border-R-orangePF{border-right: 1px solid #DA5714;}
+.border-R-anthracite{border-left: 1px solid #606171;}
+.border-R-vert{border-right: 1px solid #ADC91F;}
+.border-R-violet{border-right: 1px solid #93117E;}
+/*//////////////// BORDER COLONNE 2 \\\\\\\\\\\\\\\\*/
+.border-rouge-bleu{ border-left: 1px solid #E2001A; border-right: 1px solid #00AAD2;}
+.border-rose-bleu { border-left: 1px solid #E2007A; border-right: 1px solid #00AAD2;}
+.border-noir-vert { border-left: 1px solid #606171; border-right: 1px solid #C8D215;}
+.border-bleu-violet { border-left: 1px solid #00AAD2; border-right: 1px solid #93117E;}
+.border-vert-violet { border-left: 1px solid #ADC91F; border-right: 1px solid #93117E;}
+.border-anthracite-orangePF{border-left: 1px solid #606071;border-right: 1px solid #DA5714;}
+
+/*//////////////// BORDER LEFT \\\\\\\\\\\\\\\\*/
+.border-L-bleu{border-left: 1px solid #02A7D5;}
+.border-L-grisclair{border-left: 1px solid #CFD0D2;}
+.border-L-vert{border-left: 1px solid #ADC91F;}
+.border-L-violet{border-left: 1px solid #93117E;}
+.border-L-anthracite{border-left: 1px solid #606171;}
+
+/* VIEWS ********************************** */
+/* ----- Search Results -------------- */
+
+/* CONTAINERS ***************************** */
+/* ----- Blocks ---------------------- */
+/* ----- Wells ----------------------- */
+/* ----- Callouts and Blockquotes ---- */
+/* ----- Pullquote Text -------------- */
+
+/* POSTCARD LAYOUTS ********************** */
+
+/* IMAGES ******************************** */
+
+/* ICONS ********************************* */
+
+/* HELPER CLASSES ************************ */
+/* ----- Style ----------------------- */
+/* ----- Positioning ----------------- */
+/* ----- Sizing ---------------------- */
+
+/* GENERAL OVERRIDES ********************* */
+/* ----- Bootstrap Overrides --------- */
+/* ----- Field Collection Overrides -- */
+/* ----- Field Label Overrides ------- */
+
+/* ADMINISTRATION ************************ */
+/* ----- Admin ----------------------- */
+/* ----- User Block ------------------ */
+
+/* MEDIA QUERIES ************************* */
+/* ----- Responsive ------------------ */
+/* ----- Print ----------------------- */
