@@ -23,7 +23,7 @@
 ?>
 
 <div id="page">
-
+    
  <?php
 $theme_path = drupal_get_path('theme', 'zend7_cg');
 include ($theme_path.'/templates/includes/header.inc');
@@ -45,7 +45,7 @@ include ($theme_path.'/includes/inc_drupalMMHT.php');
 ?>          
 
    <!-- ______________________ ZONE DIAPO PANORAMIQUE _______________________ -->
- <div id="zone-dipao">
+ <div id="zone-diapo">
            <?php if (!empty($page['DiapoHP'])): ?>
                  <div id="HPDiapo"><?php print render ($page['DiapoHP']); ?></div>
               <?php endif; ?>
@@ -87,13 +87,15 @@ include ($theme_path.'/includes/inc_drupalMMHT.php');
 </div><!-- /container -->
 	 
 
-  </div><!-- /#main -->
+  
 
  <?php
 $theme_path = drupal_get_path('theme', 'zend7_cg');
 include ($theme_path.'/templates/includes/footer.inc');
 ?>
 
-</div><!-- /#page -->
+</div><!-- /#main -->
 
 <?php print render($page['bottom']); ?>
+
+</div><!-- /#page -->

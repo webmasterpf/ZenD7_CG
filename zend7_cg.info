@@ -65,6 +65,7 @@ stylesheets[all][] = css/print.css
 ; CSS custom compilée par Compass
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/layout-home.css
+stylesheets[all][] = css/global.css
 ; CSS pour utiliser MegaMenu
 stylesheets[all][] = css/navigation/megamenu-skins.css
 ; CSS pour utiliser OM MaxiMenu

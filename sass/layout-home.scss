@@ -12,8 +12,10 @@ $zen-gutter-width: 10px;
 
 #header{@include zen-grid-container;}
 /*Partie gauche du header*/
-#headHaut{@include zen-grid-container;
-	margin:0;	
+#headHaut{
+    @include zen-grid-container;
+    @include zen-nested-container();
+    margin:0;	
 }
 #logo-container{
 	@include zen-grid-item(3,1);
@@ -46,20 +48,28 @@ padding:4px;
 /************PARTIE BASSE**************/
 #headBas{
 	@include zen-grid-container;
+        @include zen-nested-container();
 	background:transparent url(../images/bg_menu_rp.gif) repeat-x top left;
+        @media screen and (max-width:900px){
+ background:transparent;
+}
 	
 }
 
 #name-and-slogan{}
+#site-name{}
 #site-name a{
 text-decoration: none;
 color: white;
 text-transform: uppercase;
 }
 
-#site-name{}
+
 #site-slogan{
 @include zen-clear(both);@include zen-grid-item(8,1);
+    @media screen and (max-width:900px){
+    background-color:#FFFFFF;
+}
 }
 
 #site-slogan a{
@@ -67,7 +77,13 @@ text-decoration: none;
 color: white;
 text-transform: uppercase;
 }
-#search-container{ @include zen-grid-item(3,2,right);margin:0;}
+#search-container{
+    @include zen-grid-item(3,2,right);margin:0;
+    @media screen and (max-width:900px){
+        @include zen-clear(both);@include zen-grid-item(4,1);
+        background-color:#FFFFFF;
+}
+}
 /*Menu principal haut du header*/
 #menu-container{
 @include zen-clear(both);@include zen-grid-item(12,1);	
@@ -75,6 +91,7 @@ text-transform: uppercase;
 
 /*FIN CSS HEADER*/
 /*****************/
+#footer{}
 #main{
 	background: url(../images/bg_content_etoile.gif) no-repeat left bottom;
 	
@@ -85,28 +102,12 @@ text-transform: uppercase;
     color: gray;
     font-weight: bold;
 }
-#HPDiapo{
-@include zen-grid-container;
+#zone-diapo,#HPDiapo{
+    @include zen-grid-container;
+    @include zen-nested-container();
+    @media screen and (max-width:900px){
+ @include zen-clear(both);@include zen-grid-item(6,1);           
 }
-/****************/
-#BasGaucheHP{
-        @include zen-clear(both);@include zen-grid-item(6,1);
-}
-
-#BasDroitHP{
-	@include zen-grid-item(6,2,right);
-}
-#BasGaucheHP ul li{
-    list-style: square;
-}
-#BasGaucheHP a,#BasDroitHP a{
-text-decoration:none;
-}
-#BasGaucheHP a:hover,#BasDroitHP a:hover{
-text-decoration:underline;
-}
-#BasDroitHP h3,#BasGaucheHP h3,#BasDroitHP h2,#BasGaucheHP h2{
-    text-align: center;color: #E7512F;
 }
 /*---DIAPORAMA HOMEPAGE TEXTE DYNAMIQUE  PANORAMIQUE----*/
 #transparency{
@@ -129,22 +130,30 @@ left: 10px;
 color: white;
 z-index:20;
 top: -40px;
+
 }
 #contenu-diapo h2{
 color: white;
 padding:5px;
 font-family: Arista,Trebuchet MS,sans serif;
-
+line-height: 0;
+margin: 0;
 }
+#contenu-diapo p{margin:0;}
+    
 #contenu-diapo a{
 color: white;
 text-decoration: none;
 }
 .view-diaporama-homepage{
-height:200px;
+    @include zen-grid-item(12,1);
+/*height:200px;
 margin:0 auto;
 position:inherit;
-width:978px;
+width:978px;*/
+}
+#views_slideshow_cycle_teaser_section_diaporama_homepage-block_2{
+    margin:0 auto;
 }
 #views_slideshow_singleframe_main_diaporama_homepage-block_1{
     padding: 0;
@@ -166,6 +175,35 @@ width:978px;
     width: 880px;
     margin: 0 auto;
     display: block;
+}
+/*---------------------------------------------------------
+--------------  ZONAGE HOMEPAGE
+-----------------------------------------------------------
+*/
+#BasGaucheHP{
+        @include zen-clear(both);@include zen-grid-item(6,1);
+        @media screen and (max-width:900px){
+            
+}
+}
+
+#BasDroitHP{
+	@include zen-grid-item(6,2,right);
+        @media screen and (max-width:900px){
+ @include zen-clear(both);@include zen-grid-item(6,1);           
+}
+}
+#BasGaucheHP ul li{
+    list-style: square;
+}
+#BasGaucheHP a,#BasDroitHP a{
+text-decoration:none;
+}
+#BasGaucheHP a:hover,#BasDroitHP a:hover{
+text-decoration:underline;
+}
+#BasDroitHP h3,#BasGaucheHP h3,#BasDroitHP h2,#BasGaucheHP h2{
+    text-align: center;color: #E7512F;
 }
 /*
 HOMEPAGE SLIDESHOW DERNIERES VDL (Views2)=======================
